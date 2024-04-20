@@ -14,21 +14,22 @@ console.log (calcAges()) //logging new number
 
 //question 2 
 // Array containing names
-const names1 = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+var names1 = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
 
-// Calculating the average number of letters per name
+//  average number of letters per name
 let totalLetters = 0;
 for (let i = 0; i < names1.length; i++) {
     totalLetters += names1[i].length;
 }
-const averageLetters = totalLetters / names.length;
+let averageLetters = totalLetters / names1.length;
 console.log("Average number of letters per name:", averageLetters);
 
-// Concatenate all the names together, separated by spaces
+
+// Concatenate all the names together
 let concatenatedNames = '';
-for (let i = 0; i < names.length; i++) {
-    concatenatedNames += names[i];
-    if (i < names.length - 1) {
+for (let i = 0; i < names1.length; i++) {
+    concatenatedNames += names1[i];
+    if (i < names1.length - 1) {
         concatenatedNames += ' ';
     }
 }
@@ -41,11 +42,10 @@ console.log("Concatenated names:", concatenatedNames);
 //How do you access the first element of any array? by using array[0]
 
 //question 5 
-let names = ["Kelly", "Sam", "Kate"];
-const nameLengths = [5, 3, 4];
-
-for (let i = 0; i < nameLengths.length; i++) {
-    nameLengths[i] = names[i].length;
+let names2 = ["Kelly", "Sam", "Kate"];
+let nameLengths = [];
+for (let i = 0; i < names2.length; i++) {
+    nameLengths[i] = names2[i].length; // accessing the names in the array and assigning the leght to the i position
 }
 
 console.log(nameLengths); 
@@ -93,10 +93,10 @@ test1 [ 1, 5, 80,7,3]
 console.log (averageOfArray (test1))
 //question 11
 function compareAverage(arr1, arr2) {
-    // Calculate the average of the elements in the first array ( 0 at end is equal to the accumulator starting at 0)
+    // average of the elements in the first array ( 0 at end is equal to the accumulator starting at 0)
     const average1 = arr1.reduce((acc, num) => acc + num, 0) / arr1.length;
 
-    // Calculate the average of the elements in the second array
+   //average of the elements in the second array
     const average2 = arr2.reduce((acc, num) => acc + num, 0) / arr2.length;
 
     // Compare the averages and return true if the average of the first array is greater
